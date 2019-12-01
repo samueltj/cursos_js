@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="btnAction">Criar quadrado</button>
+            <div class="box-squares"></div>
+        </div>
+        <script>
+            buttonElement = document.querySelector(".btnAction");
+
+            buttonElement.onclick = function(){
+                var newRedSquare = document.createElement("div");
+                newRedSquare.style.width = 100;
+                newRedSquare.style.height = 100;
+                newRedSquare.style.backgroundColor = "#ff0000";
+                newRedSquare.style.marginTop = 10;
+                
+                newRedSquare.setAttribute("href", "https://www.google.com.br");
+    
+                newRedSquare.onmouseover = function(){
+                    newRedSquare.style.backgroundColor = getRandomColor();
+                }
+
+                boxSquaresElement = document.querySelector(".box-squares");
+
+                boxSquaresElement.appendChild(newRedSquare);
+            }
+
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+                return color;
+            }
+            
+        </script>
+    </body>
+</html>

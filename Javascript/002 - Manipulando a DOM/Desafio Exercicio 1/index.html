@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="btnAction">Criar quadrado</button>
+            <div class="box-squares"></div>
+        </div>
+        <script>
+            buttonElement = document.querySelector(".btnAction");
+
+            buttonElement.onclick = function(){
+                var newRedSquare = document.createElement("div");
+                newRedSquare.style.width = 100;
+                newRedSquare.style.height = 100;
+                newRedSquare.style.backgroundColor = "#ff0000";
+                newRedSquare.style.marginTop = 10;
+                
+                newRedSquare.setAttribute("href", "https://www.google.com.br");
+    
+                boxSquaresElement = document.querySelector(".box-squares");
+
+                boxSquaresElement.appendChild(newRedSquare);
+            }
+        </script>
+    </body>
+</html>
